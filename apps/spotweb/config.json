@@ -41,7 +41,7 @@
             "min": 1,
             "max": 65535,
             "required": false,
-            "default": "3306",
+            "placeholder": "3306",
             "env_variable": "SPOTWEB_DB_PORT"
         },
         {
@@ -75,7 +75,7 @@
             "max": 50,
             "min": 10,
             "required": false,
-            "default": "*/5 * * * *",
+            "placeholder": "*/5 * * * *",
             "env_variable": "SPOTWEB_CRON_INTERVAL"
         }
     ],
