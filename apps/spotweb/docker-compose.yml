@@ -4,7 +4,7 @@ services:
     image: erikdevries/spotweb:sha-dbfe6c0
     container_name: spotweb
     environment:
-      - TZ=${TZ}
+      - TZ: ${TZ}
       - DB_ENGINE: ${SPOTWEB_DB_ENGINE}
       - DB_HOST: ${SPOTWEB_DB_HOST}
       - DB_PORT: ${SPOTWEB_DB_PORT}
