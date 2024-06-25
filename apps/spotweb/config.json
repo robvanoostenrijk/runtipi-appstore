@@ -81,7 +81,7 @@
     ],
     "id": "spotweb",
     "name": "Spotweb",
-    "port": 8085,
+    "port": 80,
     "short_desc": "Spotweb decentralized usenet community",
     "source": "https://github.com/edv/docker-spotweb/",
     "supported_architectures": ["amd64"],
