@@ -4,14 +4,14 @@ services:
     image: erikdevries/spotweb:sha-dbfe6c0
     container_name: spotweb
     environment:
-      - TZ: ${TZ}
+      - CRON_INTERVAL: ${SPOTWEB_CRON_INTERVAL}
       - DB_ENGINE: ${SPOTWEB_DB_ENGINE}
       - DB_HOST: ${SPOTWEB_DB_HOST}
-      - DB_PORT: ${SPOTWEB_DB_PORT}
       - DB_NAME: ${SPOTWEB_DB_NAME}
-      - DB_USER: ${SPOTWEB_DB_USER}
       - DB_PASS: ${SPOTWEB_DB_PASS}
-      - CRON_INTERVAL: ${SPOTWEB_CRON_INTERVAL}
+      - DB_PORT: ${SPOTWEB_DB_PORT}
+      - DB_USER: ${SPOTWEB_DB_USER}
+      - TZ: ${TZ}
     dns:
       - ${DNS_IP}
     volumes:
