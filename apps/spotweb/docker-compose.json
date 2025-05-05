@@ -1,0 +1,32 @@
+{
+    "services": [
+      {
+        "name": "spotweb",
+        "image": "erikdevries/spotweb:sha-8d26697",
+        "environment": {
+          "CRON_INTERVAL": "${SPOTWEB_CRON_INTERVAL}",
+          "DB_ENGINE": "${SPOTWEB_DB_ENGINE}",
+          "DB_HOST": "${SPOTWEB_DB_HOST}",
+          "DB_NAME": "${SPOTWEB_DB_NAME}",
+          "DB_PASS": "${SPOTWEB_DB_PASS}",
+          "DB_PORT": "${SPOTWEB_DB_PORT}",
+          "DB_USER": "${SPOTWEB_DB_USER}",
+          "TZ": "${TZ}"
+        },
+        "internalPort": 80,
+        "volumes": [
+          {
+            "hostPath": "/etc/localtime",
+            "containerPath": "/etc/localtime",
+            "readOnly": true
+          },
+          {
+            "hostPath": "${APP_DATA_DIR}/cache",
+            "containerPath": "/app/cache"
+          }
+        ],
+        "isMain": true
+      }
+    ],
+    "$schema": "../dynamic-compose-schema.json"
+  }
