@@ -1,9 +1,11 @@
 {
     "$schema": "../app-info-schema.json",
+    "name": "Spotweb",
     "author": "Spotweb",
     "available": true,
     "categories": ["media", "utilities"],
     "description": "Spotweb is a decentralized usenet community based on the Spotnet protocol.",
+    "dynamic_config": true,
     "exposable": true,
     "form_fields": [
         {
@@ -80,11 +82,10 @@
         }
     ],
     "id": "spotweb",
-    "name": "Spotweb",
     "port": 8231,
     "short_desc": "Spotweb decentralized usenet community",
     "source": "https://github.com/edv/docker-spotweb/",
     "supported_architectures": ["amd64"],
-    "tipi_version": 14,
+    "tipi_version": 15,
     "version": "8d26697"
   }
